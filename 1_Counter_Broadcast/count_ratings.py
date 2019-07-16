@@ -4,7 +4,7 @@ import collections
 conf = SparkConf().setMaster("local").setAppName("Rating_Counter")
 sc = SparkContext(conf = conf)
 
-filelines = sc.textFile("C:\\Sparkcourse\\ml-100k\\u.data")
+filelines = sc.textFile("C:\\Sparkcourse\\1_Counter\\ml-100k\\u.data")
 ratings=filelines.map(lambda x:x.split()[2])
 ratingsCountDic=ratings.countByValue()
 
